@@ -42,6 +42,7 @@ class strpal {
 }
 ```
 ## Check if two strings are anagrams  
+```java
 import java.io.*;
 import java.util.Scanner;
 import java.util.Arrays;
@@ -80,3 +81,4 @@ class strpal {
 	
 	
 	}
+```
