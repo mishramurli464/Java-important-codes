@@ -82,3 +82,36 @@ class strpal {
 	
 	}
 ```
+
+## to count the occurance of a particular character in the give string  
+```java
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.Scanner;
+import java.util.Arrays;
+class strpal {
+	public static void main (String[] args) {
+	    Scanner sc= new Scanner(System.in);
+	    String s1= sc.nextLine();
+	    // char[] charArray = s1.toCharArray();
+	    char c1=sc.next().charAt(0);
+	    int l=s1.length();
+	    int i;
+	    int count=0;
+	    for(i=0;i<l;i++)
+	    {
+	        
+	        if(s1.charAt(i)==c1)
+	        {
+	            count+=1;
+	        }
+	    }
+	    
+	    System.out.println("ocuurance:"+ count);
+	
+	
+	}
+	
+}
+```
