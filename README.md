@@ -171,4 +171,31 @@ class strpal {
         }
     }
 }
-``` 
+```
+## to count vovels and consonant in string
+
+```java
+import java.util.Scanner;  
+class consvow{
+    public static void  main (String[] args)
+    {
+        Scanner sc= new Scanner(System.in);
+        String s = sc.nextLine();
+        int i;
+        int count =0;
+        int l = s.length();
+        
+        for (i=0;i<l;i++) 
+        {
+            if (s.charAt(i)== 'a' || s.charAt(i)== 'e' || s.charAt(i)== 'i' || s.charAt(i)== 'o' || s.charAt(i)== 'u')
+            {
+                count+=1;
+            }
+        }
+        System.out.println("vowels:" + count);
+        int cons= l - count;
+        System.out.println("consonants:" + cons);
+    }
+    
+}
+```
