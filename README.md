@@ -144,3 +144,31 @@ class strpal {
 }
 
 ```
+ ## to count the occurrences of each character in the input string s1
+```java
+import java.util.Scanner;
+
+class strpal {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s1 = sc.nextLine();
+        int l = s1.length();
+        int i, j;
+        
+        for (i = 0; i < l; i++) {
+            int count = 0; // Reset count for each character
+            
+            for (j = 0; j < l; j++) {
+                if (s1.charAt(i) == s1.charAt(j)) {
+                    count++;
+                }
+            }
+            
+            // Print the character along with its count, but only once per character
+            if (i == 0 || s1.charAt(i) != s1.charAt(i - 1)) {
+                System.out.println(s1.charAt(i) + " - " + count);
+            }
+        }
+    }
+}
+``` 
