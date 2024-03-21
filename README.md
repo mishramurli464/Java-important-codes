@@ -199,3 +199,35 @@ class consvow{
     
 }
 ```
+
+## finding and printing matching elements in an array.  
+```java
+import java.util.Scanner;
+
+class consvow {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the array:");
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < size; i++) {
+            for (int j = i+1; j<size; j++) {
+                if (arr[i] == arr[j]) {
+                    if (i==0 || arr[i] != arr[i-1] ){
+                    System.out.println("matching element-" + arr[i]);
+                    }
+                    break; // Exit the inner loop once a matching element is found
+                }
+            }
+        }
+        
+    }
+}
+
+```
