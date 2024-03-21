@@ -231,3 +231,46 @@ class consvow {
 }
 
 ```
+
+## to implement a method to reverse an array
+
+```java
+import java.util.Scanner;
+
+class consvow {
+    
+    public static void rev(int[] arr, int size)
+    {
+        int i=0;
+        int j= size -1;
+        int temp=0;
+        while(i<j)
+        {
+            temp = arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            i++;
+            j--;
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the array:");
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+     
+       rev(arr, size);
+       for (int i = 0; i < size; i++)
+       {
+        System.out.println(arr[i]);
+       }
+       
+    }
+}
+```
