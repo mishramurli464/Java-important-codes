@@ -274,3 +274,26 @@ class consvow {
     }
 }
 ```
+## printing fibbonaci series  
+```java
+import java.util.Scanner;
+
+class consvow {
+    public static void main(String[] args) {
+        int a=0;
+        int b=1;
+        int c,i;
+        int term;
+        Scanner sc = new Scanner(System.in);
+        term = sc.nextInt();
+        for (i=0;i<term;i++)
+        {
+            System.out.println(a + "");
+            c=a+b;
+            a=b;
+            b=c;
+        }
+    }
+}
+
+```
