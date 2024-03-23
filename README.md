@@ -297,3 +297,35 @@ class consvow {
 }
 
 ```
+
+
+## printing fibbonaci series  using recursion( by creating instance)
+```java
+import java.util.Scanner;
+
+class  fibonacci{
+    int fib(int n)
+    {
+        if (n<=1)
+        {
+            return n;
+        }
+        else
+        {
+            return (fib(n-1) + fib(n-2));
+        }
+        
+    }
+    public static void main(String[] args) {
+       int i;
+       fibonacci f1 = new fibonacci();
+       Scanner sc = new Scanner(System.in);
+       int temp = sc.nextInt();
+       for (i=0;i<temp ;i++ ) 
+       {
+        System.out.println(f1.fib(i) + " " );    
+       }
+        }
+    }
+
+``` 
