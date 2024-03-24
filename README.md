@@ -353,4 +353,33 @@ class  fibonacci{
 
 ```
 
+## Java code to find the average of numbers in a list:  
 
+```java
+import java.util.*;
+class avg{
+    
+    public static void main(String args[])
+    {
+        ArrayList<Integer> list = new ArrayList<>();
+        int num;
+        Scanner sc= new Scanner(System.in);
+        num = sc.nextInt();
+        System.out.println("enter the numbers(enter -1 to exit)");
+        while(num!= -1)
+        {
+            list.add(num);
+            num = sc.nextInt();
+        }
+        int sum=0;
+        for(int number: list)
+        {
+            sum+=number;
+        }
+        int s = list.size();
+        
+        double avg = sum/s;
+        System.out.println("average :" +avg);
+    }
+}
+```
