@@ -118,28 +118,34 @@ class strpal {
 ## to find matching characters between two strings s1 and s2. 
 ```java
 import java.util.Scanner;
+import java.io.*;
 
-class strpal {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String s1 = sc.nextLine();
-        String s2 = sc.nextLine();
+class abc {
+    public static void main( String[] args)
+    {
+        
+        String s1;
+        String s2;
+        Scanner sc= new Scanner(System.in);
+        s1=sc.nextLine();
+        s2=sc.nextLine();
         int l1 = s1.length();
         int l2 = s2.length();
-        
-        for (int i = 0; i < l1; i++) {
-            boolean foundMatch = false; // Flag to track if a match is found for the current character in s1
-            for (int j = 0; j < l2; j++) {
-                if (s1.charAt(i) == s2.charAt(j)) {
-                    System.out.println("Matching: " + s1.charAt(i));
-                    foundMatch = true;
-                    break; // Exit inner loop once a match is found
-                }
-            }
-            if (!foundMatch) {
-                System.out.println("Not Matching: " + s1.charAt(i));
-            }
+        for(int i=0; i<l1; i++)
+        {
+        for(int j=0; j<l2; j++)
+        {
+         if (s1.charAt(i)==s2.charAt(j) ) 
+         {
+         if (i==0 || s1.charAt(i)!=s2.charAt(i-1))
+         {
+         System.out.println("matching character" + " " + s1.charAt(i));
+         break;
+         }
+         }
         }
+        }
+        
     }
 }
 
